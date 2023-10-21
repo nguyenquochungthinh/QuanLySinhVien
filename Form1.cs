@@ -144,25 +144,92 @@ namespace QuanLySinhVien
             }
             else if(radNgaySinh.Checked)
             {
+                for (int i = 0; i < dataGridViewSinhVien.Rows.Count - 1; i++)
+                {
+                    if (dateTimePicker2.Text == dataGridViewSinhVien[2, i].Value.ToString())
+                    {
+                        dataGridViewTimKiem.Rows.Add(dataGridViewSinhVien[0, i].Value, dataGridViewSinhVien[1, i].Value, dataGridViewSinhVien[2, i].Value, dataGridViewSinhVien[3, i].Value,
+                            dataGridViewSinhVien[4, i].Value, dataGridViewSinhVien[5, i].Value, dataGridViewSinhVien[6, i].Value);
 
+
+                        XoattGiaoDien2();
+                    }
+                }
             }
             else if(radGioiTinh.Checked)
             {
+                for (int i = 0; i < dataGridViewSinhVien.Rows.Count - 1; i++)
+                {
+                    if (cbGioiTinh1.Text == dataGridViewSinhVien[3, i].Value.ToString())
+                    {
+                        dataGridViewTimKiem.Rows.Add(dataGridViewSinhVien[0, i].Value, dataGridViewSinhVien[1, i].Value, dataGridViewSinhVien[2, i].Value, dataGridViewSinhVien[3, i].Value,
+                            dataGridViewSinhVien[4, i].Value, dataGridViewSinhVien[5, i].Value, dataGridViewSinhVien[6, i].Value);
 
+
+                        XoattGiaoDien2();
+                    }
+                }
             }
             else if(radLop.Checked)
             {
+                for (int i = 0; i < dataGridViewSinhVien.Rows.Count - 1; i++)
+                {
+                    if (txtLop1.Text == dataGridViewSinhVien[4, i].Value.ToString())
+                    {
+                        dataGridViewTimKiem.Rows.Add(dataGridViewSinhVien[0, i].Value, dataGridViewSinhVien[1, i].Value, dataGridViewSinhVien[2, i].Value, dataGridViewSinhVien[3, i].Value,
+                            dataGridViewSinhVien[4, i].Value, dataGridViewSinhVien[5, i].Value, dataGridViewSinhVien[6, i].Value);
 
+
+                        XoattGiaoDien2();
+                    }
+                }
             }
             else if (radTruong.Checked)
             {
+                for (int i = 0; i < dataGridViewSinhVien.Rows.Count - 1; i++)
+                {
+                    if (cbTruong1.Text == dataGridViewSinhVien[5, i].Value.ToString())
+                    {
+                        dataGridViewTimKiem.Rows.Add(dataGridViewSinhVien[0, i].Value, dataGridViewSinhVien[1, i].Value, dataGridViewSinhVien[2, i].Value, dataGridViewSinhVien[3, i].Value,
+                            dataGridViewSinhVien[4, i].Value, dataGridViewSinhVien[5, i].Value, dataGridViewSinhVien[6, i].Value);
 
+
+                        XoattGiaoDien2();
+                    }
+                }
             }
             else if (radQueQuan.Checked)
             {
+                for (int i = 0; i < dataGridViewSinhVien.Rows.Count - 1; i++)
+                {
+                    if (txtQueQuan1.Text == dataGridViewSinhVien[6, i].Value.ToString())
+                    {
+                        dataGridViewTimKiem.Rows.Add(dataGridViewSinhVien[0, i].Value, dataGridViewSinhVien[1, i].Value, dataGridViewSinhVien[2, i].Value, dataGridViewSinhVien[3, i].Value,
+                            dataGridViewSinhVien[4, i].Value, dataGridViewSinhVien[5, i].Value, dataGridViewSinhVien[6, i].Value);
 
+
+                        XoattGiaoDien2();
+                    }
+                }
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 fr = new Form2();
+            fr.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form2 fr = new Form2();
+            fr.Show();
         }
     }
 }
